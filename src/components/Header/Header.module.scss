@@ -1,0 +1,43 @@
+.header {
+	@apply w-screen h-24 pt-10 pb-4 border-b;
+
+	.subHeading {
+		@apply text-subHeading text-text2 font-bold;
+	}
+
+	.nav {
+		@apply mx-auto;
+
+		.navList {
+			@apply flex items-center gap-12;
+		}
+
+		.navItem {
+			@apply h-6;
+
+			.navLink {
+				@apply text-text2 cursor-pointer;
+			}
+		}
+
+		.navItemActive {
+			@apply border-b border-text2;
+		}
+	}
+
+	.field {
+		@apply relative;
+
+		.search {
+			@apply w-60 h-10 bg-secondary text-text2 pl-5 pr-8 rounded-[4px] placeholder:text-xs;
+		}
+
+		.searchIcon {
+			@apply absolute text-text2 size-6 top-2 right-2;
+		}
+	}
+
+	.icon {
+		@apply size-6 ml-6;
+	}
+}

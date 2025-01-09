@@ -1,0 +1,19 @@
+.topHeader {
+	@apply bg-black h-12 w-screen;
+
+	.topHeaderContent {
+		@apply h-full mx-auto flex items-center gap-2;
+
+		.linkTitle {
+			@apply text-base text-text;
+		}
+
+		.link {
+			@apply text-base font-semibold text-text underline cursor-pointer;
+		}
+	}
+
+	.languageSelect {
+		@apply bg-transparent text-text cursor-pointer outline-none;
+	}
+}

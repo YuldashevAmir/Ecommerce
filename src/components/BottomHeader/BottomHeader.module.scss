@@ -1,0 +1,71 @@
+.bottomHeader {
+	@apply flex;
+
+	.controller {
+		@apply w-1/5 flex flex-col gap-4 pt-10 border-r pr-4;
+
+		.controllerItem {
+			@apply h-6 flex justify-between;
+
+			.rightArrow {
+				@apply size-4;
+			}
+		}
+	}
+
+	.carousel {
+		@apply relative flex flex-col justify-end w-4/5 mt-10 ml-[45px] bg-black;
+
+		.carouselItem {
+			@apply absolute transition-all duration-500 ease-in-out opacity-0 w-full h-[calc(100%-24px)]  px-16 flex items-center;
+
+			.info {
+				@apply flex flex-col gap-5 justify-center text-text w-2/3;
+
+				.topInfo {
+					@apply flex items-center gap-6;
+
+					.apple {
+						@apply size-12;
+					}
+
+					.title {
+						@apply text-lg;
+					}
+				}
+
+				.heading {
+					@apply text-heading font-semibold;
+				}
+
+				.bottomInfo {
+					@apply flex gap-2;
+
+					.link {
+						@apply text-lg text-text border-b  cursor-pointer;
+					}
+
+					.rightArrow {
+						@apply size-6 text-text;
+					}
+				}
+			}
+		}
+
+		.carouselItemActive {
+			@apply opacity-100;
+		}
+
+		.switcher {
+			@apply w-full min-h-6 flex justify-center items-center gap-3;
+
+			.switcherDot {
+				@apply rounded-full size-2 bg-primary cursor-pointer z-10;
+			}
+
+			.active {
+				@apply bg-secondary2;
+			}
+		}
+	}
+}
