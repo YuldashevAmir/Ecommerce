@@ -1,0 +1,88 @@
+.todaySliderItem {
+	@apply relative min-w-[270px] max-w-[270px] h-[360px] flex flex-col gap-2;
+
+	.discount {
+		@apply absolute top-3 left-3 flex items-center justify-center bg-secondary2 text-text text-xs py-2 px-3 rounded-sm;
+	}
+
+	.like,
+	.watch {
+		@apply absolute right-3 rounded-full bg-primary size-[34px] flex items-center justify-center;
+
+		.icon {
+			@apply size-6;
+		}
+	}
+
+	.like {
+		@apply top-3;
+	}
+
+	.watch {
+		@apply top-14;
+	}
+
+	.image {
+		@apply relative w-full min-h-[250px] mb-2 bg-secondary flex flex-col items-center justify-center overflow-hidden;
+
+		.addToCartBtn {
+			@apply absolute w-full top-[210px] h-10 bg-text2 text-white text-lg flex items-center justify-center rounded-sm transition-all duration-500 translate-y-10;
+		}
+	}
+
+	&:hover .addToCartBtn {
+		@apply translate-y-0;
+	}
+
+	.title {
+		@apply font-medium text-lg;
+	}
+
+	.prices {
+		@apply flex gap-4;
+
+		.currentPrice {
+			@apply font-medium text-lg text-secondary2;
+		}
+
+		.oldPrice {
+			@apply text-lg line-through font-medium opacity-50 text-text2;
+		}
+	}
+
+	.additional {
+		@apply flex gap-2;
+
+		.rank {
+			@apply flex gap-1 items-center;
+
+			.star {
+				@apply w-4 h-4;
+			}
+
+			.rankNumber {
+				@apply text-sm;
+			}
+		}
+
+		.comments {
+			@apply opacity-50 text-text2 font-semibold text-base;
+		}
+	}
+}
+
+.categorySliderItem {
+	@apply w-[170px] h-[145px] flex flex-col items-center justify-center border border-border rounded-sm cursor-pointer gap-4;
+
+	.title {
+		@apply text-lg;
+	}
+}
+
+.activeCategoryItem {
+	@apply bg-secondary2;
+
+	.title {
+		@apply text-text;
+	}
+}

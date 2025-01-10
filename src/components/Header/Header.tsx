@@ -1,6 +1,6 @@
 import clsx from 'clsx'
 import { Heart, Search, ShoppingCart } from 'lucide-react'
-import { Container } from '../Container/Container'
+import { Container } from '../layout/Container/Container'
 import styles from './Header.module.scss'
 
 export const Header = () => {

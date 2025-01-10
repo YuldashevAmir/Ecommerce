@@ -2,7 +2,7 @@
 	@apply flex;
 
 	.controller {
-		@apply w-1/5 flex flex-col gap-4 pt-10 border-r pr-4;
+		@apply w-72 flex flex-col gap-4 pt-10 border-r pr-4;
 
 		.controllerItem {
 			@apply h-6 flex justify-between;
@@ -14,13 +14,13 @@
 	}
 
 	.carousel {
-		@apply relative flex flex-col justify-end w-4/5 mt-10 ml-[45px] bg-black;
+		@apply relative flex flex-col justify-end w-full mt-10 ml-[45px] bg-black;
 
 		.carouselItem {
 			@apply absolute transition-all duration-500 ease-in-out opacity-0 w-full h-[calc(100%-24px)]  px-16 flex items-center;
 
 			.info {
-				@apply flex flex-col gap-5 justify-center text-text w-2/3;
+				@apply flex flex-col gap-5 justify-center text-text;
 
 				.topInfo {
 					@apply flex items-center gap-6;
@@ -35,7 +35,7 @@
 				}
 
 				.heading {
-					@apply text-heading font-semibold;
+					@apply text-heading font-semibold text-balance;
 				}
 
 				.bottomInfo {
@@ -57,10 +57,10 @@
 		}
 
 		.switcher {
-			@apply w-full min-h-6 flex justify-center items-center gap-3;
+			@apply w-full min-h-8 flex justify-center items-center gap-3;
 
 			.switcherDot {
-				@apply rounded-full size-2 bg-primary cursor-pointer z-10;
+				@apply border border-primary rounded-full size-[0.75rem] bg-primary cursor-pointer z-10;
 			}
 
 			.active {

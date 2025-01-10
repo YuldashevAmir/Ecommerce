@@ -1,4 +1,4 @@
-import { Container } from '../Container/Container'
+import { Container } from '../layout/Container/Container'
 import styles from './TopHeader.module.scss'
 
 export const TopHeader = () => {

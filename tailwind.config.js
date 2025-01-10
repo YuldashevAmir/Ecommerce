@@ -9,8 +9,13 @@ export default {
 			fontSize: {
 				base: '14px',
 				lg: '16px',
-				subHeading: '24px',
+				xl: '24px',
+				'2xl': '32px',
+				subHeading: '36px',
 				heading: '48px',
+			},
+			borderRadius: {
+				sm: '4px',
 			},
 			colors: {
 				primary: '#ffffff',
@@ -25,6 +30,7 @@ export default {
 				text: '#FAFAFA',
 				text1: '#7D8184',
 				text2: '#000000',
+				border: 'rgba(0, 0, 0, 0.3)',
 			},
 		},
 	},

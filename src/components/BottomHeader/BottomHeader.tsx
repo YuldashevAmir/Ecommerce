@@ -3,10 +3,9 @@ import { ArrowRight, ChevronRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import appleIcon from '../../assets/icons/appleLogo.svg'
 import carouselPhoto from '../../assets/images/carousel.png'
-import { Container } from '../Container/Container'
+import { Container } from '../layout/Container/Container'
 import styles from './BottomHeader.module.scss'
 
-// Data for controller items
 const controllerItems = [
 	'Woman’s Fashion',
 	'Men’s Fashion',

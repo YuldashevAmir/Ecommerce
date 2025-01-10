@@ -2,7 +2,7 @@
 	@apply w-screen h-24 pt-10 pb-4 border-b;
 
 	.subHeading {
-		@apply text-subHeading text-text2 font-bold;
+		@apply text-xl text-text2 font-bold;
 	}
 
 	.nav {
@@ -29,7 +29,7 @@
 		@apply relative;
 
 		.search {
-			@apply w-60 h-10 bg-secondary text-text2 pl-5 pr-8 rounded-[4px] placeholder:text-xs;
+			@apply w-60 h-10 bg-secondary text-text2 pl-5 pr-8 rounded-sm placeholder:text-xs;
 		}
 
 		.searchIcon {

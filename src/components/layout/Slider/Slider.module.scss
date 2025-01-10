@@ -1,0 +1,19 @@
+.slider {
+	@apply w-full;
+
+	.controller {
+		@apply absolute right-10 top-16 flex gap-2;
+
+		.btn {
+			@apply w-12 h-12 rounded-full bg-secondary flex items-center justify-center;
+
+			.icon {
+				@apply w-6 h-6 text-black;
+			}
+		}
+	}
+
+	.sliderContent {
+		@apply w-full flex gap-[30px] py-10;
+	}
+}
