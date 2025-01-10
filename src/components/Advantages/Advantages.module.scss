@@ -1,0 +1,23 @@
+.wrapper {
+	@apply flex justify-center gap-20 mb-36;
+
+	.item {
+		@apply w-[260px] h-40 flex flex-col  items-center;
+
+		.iconWrapper {
+			@apply size-16 rounded-full bg-black border-[10px] border-[#cacaca] flex justify-center items-center;
+
+			.icon {
+				@apply size-8  rounded-full  text-text;
+			}
+		}
+
+		.title {
+			@apply mt-6 mb-2 text-[20px] font-semibold;
+		}
+
+		.description {
+			@apply text-base;
+		}
+	}
+}

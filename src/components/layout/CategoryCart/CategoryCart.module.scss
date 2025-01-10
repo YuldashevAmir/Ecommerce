@@ -1,0 +1,15 @@
+.categorySliderItem {
+	@apply w-[170px] h-[145px] flex flex-col items-center justify-center border border-border rounded-sm cursor-pointer gap-4;
+
+	.title {
+		@apply text-lg;
+	}
+}
+
+.activeCategoryItem {
+	@apply bg-secondary2;
+
+	.title {
+		@apply text-text;
+	}
+}

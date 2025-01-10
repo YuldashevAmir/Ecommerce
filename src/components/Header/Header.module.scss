@@ -37,7 +37,15 @@
 		}
 	}
 
-	.icon {
-		@apply size-6 ml-6;
+	.iconWrapper {
+		@apply ml-6 h-full w-8 flex items-center relative;
+
+		.icon {
+			@apply size-6;
+		}
+
+		.counter {
+			@apply absolute right-0 -top-1 flex justify-center items-center bg-button2 rounded-full size-4 text-xs text-text;
+		}
 	}
 }

@@ -1,0 +1,43 @@
+.wrapper {
+	@apply flex gap-8 bg-black justify-center items-center h-[500px] my-20 px-14;
+
+	.text {
+		@apply h-full flex flex-col justify-center gap-8;
+
+		.subHeading {
+			@apply text-button1 text-lg font-semibold;
+		}
+
+		.heading {
+			@apply text-heading font-semibold text-text text-balance;
+		}
+	}
+
+	.saleTimeLeft {
+		@apply flex gap-6 items-center;
+
+		.circle {
+			@apply size-[62px] bg-primary rounded-full flex flex-col items-center justify-center gap-0;
+
+			.value {
+				@apply text-lg font-semibold;
+			}
+
+			.title {
+				@apply text-[11px] -mt-1;
+			}
+		}
+	}
+
+	.buyNowBtn {
+		@apply w-44 h-14 bg-button1 text-text rounded-sm mt-2;
+	}
+
+	.image {
+		@apply -ml-60;
+
+		img {
+			filter: drop-shadow(0px 0px 140px #fff);
+		}
+	}
+}

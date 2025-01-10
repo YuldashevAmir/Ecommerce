@@ -1,9 +1,13 @@
 import clsx from 'clsx'
 import { Heart, Search, ShoppingCart } from 'lucide-react'
+import useStore from '../../store/store'
 import { Container } from '../layout/Container/Container'
 import styles from './Header.module.scss'
 
 export const Header = () => {
+	const countBasket = useStore(state => state.countBasket)
+	const countLike = useStore(state => state.countLike)
+
 	return (
 		<header className={styles.header}>
 			<Container className='flex justify-between items-center'>
@@ -32,8 +36,17 @@ export const Header = () => {
 					/>
 					<Search className={styles.searchIcon} />
 				</div>
-				<Heart className={styles.icon} />
-				<ShoppingCart className={styles.icon} />
+				<div className={styles.iconWrapper}>
+					<Heart className={styles.icon} />
+					{countLike != 0 && <div className={styles.counter}>{countLike}</div>}
+				</div>
+
+				<div className={styles.iconWrapper}>
+					<ShoppingCart className={styles.icon} />
+					{countBasket != 0 && (
+						<div className={styles.counter}>{countBasket}</div>
+					)}
+				</div>
 			</Container>
 		</header>
 	)

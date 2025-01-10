@@ -14,6 +14,6 @@
 	}
 
 	.sliderContent {
-		@apply w-full flex gap-[30px] py-10;
+		@apply w-full h-[800px] flex transform duration-500 ease-in-out gap-[30px] py-10;
 	}
 }

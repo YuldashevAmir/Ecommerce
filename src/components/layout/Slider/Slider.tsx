@@ -7,7 +7,9 @@ interface SliderProps {
 	className?: string
 	slidesInOneWindow: number
 	maxItemWidth: number
+	maxItemHeight?: number
 	gap: number
+	rows?: number
 }
 
 export const Slider: React.FC<SliderProps> = ({
@@ -15,7 +17,9 @@ export const Slider: React.FC<SliderProps> = ({
 	className,
 	slidesInOneWindow,
 	maxItemWidth,
+	maxItemHeight = 360,
 	gap,
+	rows = 1,
 }) => {
 	const slides = React.Children.toArray(children)
 	const [currentSlide, setCurrentSlide] = useState(0)
@@ -45,27 +49,32 @@ export const Slider: React.FC<SliderProps> = ({
 				</button>
 			</div>
 
-			<div
-				className={styles.sliderContent}
-				style={{
-					display: 'flex',
-					transition: 'transform 0.5s ease-in-out',
-					transform: `translateX(-${currentSlide * 1200}px)`,
-					gap: `${gap}px`,
-				}}
-			>
-				{slides.map((slide, index) => (
-					<div
-						key={index}
-						style={{
-							flex: '0 0 100%',
-							maxWidth: `${maxItemWidth}px`,
-						}}
-					>
-						{slide}
-					</div>
-				))}
-			</div>
+			{Array.from({ length: rows }, (_, i) => i + 1).map((row, indexRow) => (
+				<div
+					key={indexRow}
+					className={clsx(styles.sliderContent)}
+					style={{
+						transform: `translateX(-${currentSlide * 1200}px)`,
+						gap: `${gap}px`,
+						height: `${maxItemHeight}px`,
+					}}
+				>
+					{slides.map(
+						(slide, index) =>
+							index % rows === indexRow && (
+								<div
+									key={index}
+									style={{
+										flex: '0 0 100%',
+										maxWidth: `${maxItemWidth}px`,
+									}}
+								>
+									{slide}
+								</div>
+							)
+					)}
+				</div>
+			))}
 		</div>
 	)
 }

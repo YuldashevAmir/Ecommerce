@@ -1,5 +1,6 @@
 import clsx from 'clsx'
 import { useEffect, useState } from 'react'
+import { Button } from '../UI/Button/Button'
 import styles from './Section.module.scss'
 
 interface SectionProps {
@@ -8,6 +9,7 @@ interface SectionProps {
 	children?: React.ReactNode
 	timeLeft?: string
 	className?: string
+	variant?: 'default' | 'button'
 }
 
 export const Section: React.FC<SectionProps> = ({
@@ -16,6 +18,7 @@ export const Section: React.FC<SectionProps> = ({
 	children,
 	timeLeft,
 	className,
+	variant = 'default',
 }) => {
 	const [time, setTime] = useState({
 		days: 0,
@@ -60,7 +63,12 @@ export const Section: React.FC<SectionProps> = ({
 		<section className={clsx(styles.section, className)}>
 			<div className={styles.redRectangle}></div>
 			<h5 className={styles.sectionTitle}>{sectionTitle}</h5>
-			<div className={styles.headingContent}>
+			<div
+				className={clsx(
+					styles.headingContent,
+					variant === 'button' && styles.buttonVariant
+				)}
+			>
 				<h2 className={styles.heading}>{heading}</h2>
 				{timeLeft && (
 					<div className={styles.timeLeft}>
@@ -92,6 +100,9 @@ export const Section: React.FC<SectionProps> = ({
 							</span>
 						</div>
 					</div>
+				)}
+				{variant === 'button' && (
+					<Button className={styles.viewAllBtn}>View All</Button>
 				)}
 			</div>
 			{children}
